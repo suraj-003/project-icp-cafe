@@ -117,11 +117,66 @@ body{
 }
 
 .back-img{
-    background-image: url(/images/misal2-img.jpg);
-    opacity: 0.2;
+    height: 480px;
+    margin-top: 400px;
+}
+
+.head-sub{
+    color: white;
+    font-size: 60px;
+    color: gold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: start;
+}
+.para-1{
+    color: white;
+}
+.welcome{
+    margin-top: -450px;
+}
+.foot{
+    margin-top: 500px;
 }
 
 
+/* feedback */
+
+#feedback, #customer-reviews, #leave-feedback {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+#customer-reviews .review {
+    margin-bottom: 15px;
+}
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid #333;
+    padding-left: 15px;
+}
+blockquote span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+}
+#leave-feedback button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#leave-feedback button:hover {
+    background-color: #555;
+}
+.customer-re{
+   font-family: 'Times New Roman', Times, serif;
+}
 
 
 
@@ -312,3 +367,82 @@ footer {
     padding-top: 10px;
 }
 
+#franchises {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+#franchises h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+.franchise-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.franchise {
+    background-color: #fff;
+    width: 280px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+.franchise img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.franchise h3 {
+    color: #333;
+    margin: 10px 0;
+}
+.franchise p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.franchise button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.franchise button:hover {
+    background-color: #555;
+}
+iframe{
+    height: 250PX;
+    width: 250PX;
+}
+.backfoot{
+    margin-top: 0px;
+}
+
+.container-own{
+    display: flex;
+    height: auto;
+}
+
+.box-1{
+    height: AUTO;
+    margin-top: 10px;
+   margin-left: 230px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.social{
+    height: 50px;
+    margin-left: 70px;
+    border-radius: 60%;
+}
