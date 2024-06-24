@@ -1,88 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cafe Comment Box</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Order Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-<style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
 
-h1 {
-  text-align: center;
-  color: #333;
-}
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
-form {
-  margin-bottom: 20px;
-}
+        .form-group label {
+            width: 48%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-label {
-  font-weight: bold;
-}
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
+        .full-width {
+            width: 100%;
+        }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-button:hover {
-  background-color: #45a049;
-}
+        .menu-item input[type="number"] {
+            width: 50px;
+            margin-left: 10px;
+        }
 
-.comment {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-left: 4px solid #4CAF50;
-  border-radius: 4px;
-}
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+        }
 
-</style>
+        .payment {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #d9534f;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .search {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Leave a Comment</h1>
-    <form id="commentForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-      
-      <label for="comment">Comment:</label><br>
-      <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
-      
-      <button type="submit">Submit</button>
-    </form>
-    
-    <div id="comments">
-      <!-- Comments will be dynamically added here -->
+    <div class="container">
+        <h2>Cafe Order Page</h2>
+        <div class="search">
+            <input type="text" id="searchBox" placeholder="Search menu..." oninput="filterMenu()">
+        </div>
+        <form id="orderForm" action="/submit-order" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:
+                    <input type="text" id="name" name="name" required>
+                </label>
+
+                <label for="phone">Phone:
+                    <input type="tel" id="phone" name="phone" required>
+                </label>
+
+                <label for="email">Your Email:
+                    <input type="email" id="email" name="email" required>
+                </label>
+
+                <label for="address" class="full-width">Delivery Address:
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </label>
+            </div>
+
+            <h3>Menu</h3>
+            <div id="menuItems">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+
+            <div class="total" id="totalPrice">Total: $0</div>
+            <div class="payment" id="paymentDue">You need to pay: $0</div>
+
+            <button type="submit">Place Order</button>
+        </form>
     </div>
-  </div>
-  
-  <script src="script.js"></script>
+
+    <script>
+        const menuarr = [
+            "MISAL PAV", "KAKA'S SPECIAL MISAL", "KAKA'S MISAL", "FRY MISAL", "Mojito", "Mai Tai", "watermelon",
+            "Tom Collins", "BUTTER DOSA", "CUTTING DOSA", "MASALA DOSA", "PANEER DOSA", "COLD COFFEE", "OREO COFFEE",
+            "CHOCOLATE SHAKE", "VANILA MILKSHAKE", "STRAWBERRY MILKSHAKE", "RED WINE MILKSHAKE", "RED VELVET MILKSHAKE",
+            "SUGAR COOKIE", "MASALA CHAI", "ADRAK CHAI", "ELAICHI CHAI", "FILTER COFFEE", "HALADI DUDH", "GREEN TEA",
+            "BADAM MILK", "KESAR DUDH"
+        ];
+
+        const prices = {
+            "MISAL PAV": 3, "KAKA'S SPECIAL MISAL": 5, "KAKA'S MISAL": 4, "FRY MISAL": 4, "Mojito": 3,
+            "Mai Tai": 4, "watermelon": 2, "Tom Collins": 3, "BUTTER DOSA": 4, "CUTTING DOSA": 3, "MASALA DOSA": 5,
+            "PANEER DOSA": 6, "COLD COFFEE": 3, "OREO COFFEE": 4, "CHOCOLATE SHAKE": 4, "VANILA MILKSHAKE": 3,
+            "STRAWBERRY MILKSHAKE": 3, "RED WINE MILKSHAKE": 5, "RED VELVET MILKSHAKE": 4, "SUGAR COOKIE": 2,
+            "MASALA CHAI": 2, "ADRAK CHAI": 2, "ELAICHI CHAI": 2, "FILTER COFFEE": 2, "HALADI DUDH": 3, "GREEN TEA": 2,
+            "BADAM MILK": 3, "KESAR DUDH": 4
+        };
+
+        const menuItemsDiv = document.getElementById('menuItems');
+
+        function displayMenuItems(menuItems) {
+            menuItemsDiv.innerHTML = '';
+            menuItems.forEach(item => {
+                const menuItemDiv = document.createElement('div');
+                menuItemDiv.classList.add('menu-item');
+                menuItemDiv.innerHTML = `
+                    <label for="${item.toLowerCase().replace(/ /g, '')}">${item} ($${prices[item]} each):</label>
+                    <input type="number" id="${item.toLowerCase().replace(/ /g, '')}" name="${item.toLowerCase().replace(/ /g, '')}" min="0" value="0" oninput="calculateTotal()">
+                `;
+                menuItemsDiv.appendChild(menuItemDiv);
+            });
+        }
+
+        function filterMenu() {
+            const searchQuery = document.getElementById('searchBox').value.toLowerCase();
+            const filteredMenu = menuarr.filter(item => item.toLowerCase().includes(searchQuery));
+            displayMenuItems(filteredMenu);
+        }
+
+        function calculateTotal() {
+            let total = 0;
+            menuarr.forEach(item => {
+                const quantity = document.getElementById(item.toLowerCase().replace(/ /g, '')).value;
+                total += quantity * prices[item];
+            });
+            document.getElementById('totalPrice').innerText = 'Total: $' + total;
+            document.getElementById('paymentDue').innerText = 'You need to pay: $' + total;
+        }
+
+        // Display all menu items on initial load
+        displayMenuItems(menuarr);
+    </script>
 </body>
 </html>

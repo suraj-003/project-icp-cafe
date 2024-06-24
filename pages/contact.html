@@ -40,10 +40,10 @@
               <a class="nav-link active" aria-current="page" href="/index.html">Home</a> 
               <a class="nav-link active" aria-current="page" href="/pages/foodmenu.html"> Menu</a> 
               <a class="nav-link active" aria-current="page" href="/pages/service.html">About</a> 
-              <a class="nav-link active" aria-current="page" href="#">About</a> 
+              <!-- <a class="nav-link active" aria-current="page" href="#">Contact For Franchise</a>  -->
              
               <a class="nav-link" href="#">Contact For Franchise</a>
-              <a class="nav-link disabled" aria-disabled="">Contact For Franchise</a>
+              <!-- <a class="nav-link disabled" aria-disabled="">Contact For Franchise</a> -->
             </div>
           </div>
         </div>
@@ -56,29 +56,124 @@
       <div class="menu-container">
         <div class="menu-item" style="background-image: url('/images/misal2-img.jpg');">
             <div class="menu-content">
-                <h3> MISAL SHOP</h3>
+                <h3> MISAL SHOP</h3><br>
+                <button>Fill the Form</button>
                
-                <p class="price">₹ 60.00</p>
+                <!-- <p class="price">₹ 60.00</p> -->
             </div>
         </div>
-        <div class="menu-item" style="background-image: url('/images/misal3.avif');">
+        <div class="menu-item" style="background-image: url('/images/cafe\ shop.jpg');">
             <div class="menu-content">
-                <h3>KAKA'S SPECIAL MISAL</h3>
+                <h3>CAFE SHOP</h3><br>
+                <button>Fill the Form</button>
                 <!-- <p>Description of item 2.</p> -->
-                <p class="price">₹ 150.00</p>
+                <!-- <p class="price">₹ 150.00</p> -->
             </div>
         </div>
         <div class="menu-item" style="background-image: url('/images/misal.jpg');">
             <div class="menu-content">
-                <h3>KAKA'S MISAL</h3>
-                <p>Description of item 3.</p>
-                <p class="price">₹ 100.00</p>
+                <h3>KAKA'S MISAL</h3> <br>
+                <button>Fill the Form</button>
+                <!-- <p class="price">₹ 100.00</p> -->
             </div>
         </div>
        
         <!-- Add more menu items as needed -->
     </div>
   </div>
+
+  <H1 style="font-size: 40px;">Benefits</H1>
+ <p style="text-align: center; margin-top: -15px;">With Kaka's Misal   </p> 
+  <div class="menu-container">
+    <div class="menu-item" ><img class="icons" src="/images/icon-1.png" alt="">
+        <div class="menu-content">
+            <h3 style="color: black; font-weight: bolder;"> Brand Recognition <br>
+            </h3>
+           
+            <p style="height: 126px;" >Jogeshwari Misal enjoys widespread recognition, ensuring that your venture starts with a name that people trust and love.</p>
+        </div>
+    </div>
+    <div class="menu-item"><img class="icons" src="/images/icon-2.png" alt="">
+        <div class="menu-content">
+            <h3 style="color: black; font-weight: bolder;">Proven Business Model
+            </h3>
+            <p >Our success story isn’t just a tale; it’s a proven business model that has led to the flourishing of over 150 franchises across Maharashtra.
+
+            </p>
+            <!-- <p class="price">Our success story isn’t just a tale; it’s a proven business model that has led to the flourishing of over 150 franchises across Maharashtra. -->
+
+            </p>
+        </div>
+    </div>
+    <div class="menu-item" ><img class="icons" src="/images/icon-3.png" alt="">
+        <div class="menu-content">
+            <h3 style="color: black; font-weight: bolder;">Ongoing Support
+            </h3>
+            <p style="height: 126px;">At Jogeshwari Misal, we don’t just welcome you into the family; we stand with you every step of the way, ensuring that your journey is guided and supported,
+
+            </p>
+            <!-- <p class="price">₹ 100.00</p> -->
+        </div>
+    </div>
+    <div class="menu-item"><img class="icons" src="/images/icon-4.png" alt="">
+        <div class="menu-content">
+            <h3 style="color: black; font-weight: bolder;"> Community Connection
+            </h3> 
+            <p style="height: 100px;">Beyond just a franchise, Jogeshwari Misal is a community. Joining us means becoming part of a network of passionate entrepreneurs and food enthusiasts.
+
+            </p>
+            
+        </div>
+    </div>
+    <!-- Add more menu items as needed -->
+</div>
+</div>
+
+
+
+
+<div class="form-div">
+  <form action="/submit" method="post" enctype="multipart/form-data" style="background-image: url(/images/.avif); background-color:linen;"> 
+    <h2>Franchise Inquiry Form</h2>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="residentialAddress">Residential Address:</label>
+    <textarea id="residentialAddress" name="residentialAddress" rows="3" required></textarea>
+
+    <label for="proposedOutletAddress">Proposed Outlet Address:</label>
+    <textarea id="proposedOutletAddress" name="proposedOutletAddress" rows="3" required></textarea>
+
+    <label for="aadharNumber">Aadhar Number:</label>
+    <input type="text" id="aadharNumber" name="aadharNumber" required>
+
+    <label for="panNumber">Pan Number:</label>
+    <input type="text" id="panNumber" name="panNumber" required>
+
+    <label for="aadharCard">Upload Aadhar Card:</label>
+    <input type="file" id="aadharCard" name="aadharCard" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label for="panCard">Upload Pan Card:</label>
+    <input type="file" id="panCard" name="panCard" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <label>
+        <input type="checkbox" id="confirmation" name="confirmation" required>
+        I hereby guarantee the validity and accuracy of the information provided in this form.
+    </label>
+
+    <button type="submit">Submit</button>
+</form>
+</div>
 
             
         </div>

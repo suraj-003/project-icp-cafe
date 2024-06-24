@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Inquiry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <h2>Franchise Inquiry Form</h2>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="residentialAddress">Residential Address:</label>
+        <textarea id="residentialAddress" name="residentialAddress" rows="3" required></textarea>
+
+        <label for="proposedOutletAddress">Proposed Outlet Address:</label>
+        <textarea id="proposedOutletAddress" name="proposedOutletAddress" rows="3" required></textarea>
+
+        <label for="aadharNumber">Aadhar Number:</label>
+        <input type="text" id="aadharNumber" name="aadharNumber" required>
+
+        <label for="panNumber">Pan Number:</label>
+        <input type="text" id="panNumber" name="panNumber" required>
+
+        <label for="aadharCard">Upload Aadhar Card:</label>
+        <input type="file" id="aadharCard" name="aadharCard" accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <label for="panCard">Upload Pan Card:</label>
+        <input type="file" id="panCard" name="panCard" accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <label>
+            <input type="checkbox" id="confirmation" name="confirmation" required>
+            I hereby guarantee the validity and accuracy of the information provided in this form.
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
