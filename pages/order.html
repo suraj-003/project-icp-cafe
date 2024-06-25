@@ -46,53 +46,435 @@
 <div class="order-center">
     <div>
         <h3 style="color: darkred; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Misal</h3>
+        
 
-        <div class="order-1"> <p style="margin-left: 420px; font-size: 20px;">Quantity</p>
+        <div class="order-1"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
+            
+           
             <div class="horizontal">
                 <p style="margin:   5px; margin-left: 50px;"> MISAL PAV</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 60</span>
                 <img onclick="decrease()" class="order-sign" src="/images/minus sogn.png" alt="">
                 <span class="number" id="quantity">1</span>
                  <img onclick="increase()" class="plus-sign" src="/images/plus.png" alt="">
+
+
+                 <span class="amount" id="itemprice">  60</span>
+
+
                              <!-- <input class="order-input" id="quantity" type="text" > -->
             </div>
             <div class="horizontal">
-                <p style="margin:   5px; margin-left: 50px;">KAKA'S SPECIAL MISAL</p>  
-                <img class="order-sign" src="/images/minus sogn.png" alt="">
-                             <b style="margin-top: 3px;">&nbsp;0 </b>
-                             <img  class="plus-sign" src="/images/plus.png" alt="">
+                <p style="margin:   5px; margin-left: 50px;">KAKA'S SPECIAL MISAL</p> 
+                
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 150</span>
+                <img onclick="decrease_2()" class="order-sign" src="/images/minus sogn.png" alt="">
+                <span class="number" id="quantity-2">1</span>
+                
+
+                <img onclick="increase_2()"  class="plus-sign" src="/images/plus.png" alt="">
+
+                <span class="amount" id="itemprice-2"> 150</span>
+
+                
             </div>
             <div class="horizontal">
                 <p style="margin:   5px; margin-left: 50px;"> KAKA'S MISAL</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img class="order-sign" src="/images/minus sogn.png" alt="">
-                <b style="margin-top: 3px;">&nbsp;0 </b>
-                <img class="plus-sign" src="/images/plus.png" alt="">
+                
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
+                <img onclick="decrease_3()" class="order-sign" src="/images/minus sogn.png" alt="">
+                <span class="number" id="quantity-3">1</span>
+                <img onclick="increase_3()" class="plus-sign" src="/images/plus.png" alt="">
+                <span class="amount" id="itemprice-3"> 100</span>
             </div>
             <div class="horizontal">
-                <p style="margin:   5px; margin-left: 50px;">  FRY MISAL</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img class="order-sign" src="/images/minus sogn.png" alt="">
-                             <b style="margin-top: 3px;">&nbsp;0 </b>
-                             <img class="plus-sign" src="/images/plus.png" alt="">
+                <p style="margin:   5px; margin-left: 50px;">  FRY MISAL</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 80</span> 
+
+                <img onclick="decrease_4()" class="order-sign" src="/images/minus sogn.png" alt="">
+                <span class="number" id="quantity-4">1</span>
+                <img onclick="increase_4()" class="plus-sign" src="/images/plus.png" alt="">
+                <span class="amount" id="itemprice-4">  80</span>
+               
+
+           
+    
             </div>
+<hr>
+
+<button onclick="Total()" style="margin-left: 245px; border-radius: 5px; margin-bottom: 5px;"> Total</button>
+<span id="Final" style="margin-left: 180px; color: black; font-size: 20px; font-weight: bold ;">  </span>
+<!-- <p style="margin-top: -10px; margin-left: 520px; font-weight: bold; background-color: lightcoral;" id="Final" onclick="Total()">0 </p> -->
+
+
         </div>
     </div>
 
 <br>
 
+<div>
+    <h3 style="color: darkred; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Cold Drinks</h3>
+    
+
+    <div class="order-1"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
+        
+       
+        <div class="horizontal">
+            <p style="margin:   5px; margin-left: 50px;"> MOJITO</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 60</span>
+            <img onclick="decrease_21()" class="order-sign" src="/images/minus sogn.png" alt="">
+            <span class="number" id="quantity-21">1</span>
+             <img onclick="increase_21()" class="plus-sign" src="/images/plus.png" alt="">
+
+
+             <span class="amount" id="itemprice-21">  60</span>
+
+
+                         <!-- <input class="order-input" id="quantity" type="text" > -->
+        </div>
+        <div class="horizontal">
+            <p style="margin:   5px; margin-left: 50px;">MAI TAI</p> 
+            
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
+            <img onclick="decrease_22()" class="order-sign" src="/images/minus sogn.png" alt="">
+            <span class="number" id="quantity-22">1</span>
+            
+
+            <img onclick="increase_22()"  class="plus-sign" src="/images/plus.png" alt="">
+
+            <span class="amount" id="itemprice-22"> 100</span>
+
+            
+        </div>
+        <div class="horizontal">
+            <p style="margin:   5px; margin-left: 50px;"> WATERLEMON</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
+            <img onclick="decrease_23()" class="order-sign" src="/images/minus sogn.png" alt="">
+            <span class="number" id="quantity-23">1</span>
+            <img onclick="increase_23()" class="plus-sign" src="/images/plus.png" alt="">
+            <span class="amount" id="itemprice-23"> 100</span>
+        </div>
+        <div class="horizontal">
+            <p style="margin:   5px; margin-left: 50px;">   TOM COLLINS</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 110</span> 
+
+            <img onclick="decrease_24()" class="order-sign" src="/images/minus sogn.png" alt="">
+            <span class="number" id="quantity-24">1</span>
+            <img onclick="increase_24()" class="plus-sign" src="/images/plus.png" alt="">
+            <span class="amount" id="itemprice-24">  110</span>
+           
+
+       
+
+        </div>
+
+        
+        
+<hr>
+
+<button onclick="Total()" style="margin-left: 245px; border-radius: 5px; margin-bottom: 5px;"> Total</button>
+<span id="Final" style="margin-left: 180px; color: black; font-size: 20px; font-weight: bold ;">  </span>
+
+
   
 
 <script>
+
+
+function Total() {
+     let p1=  document.getElementById("itemprice")
+     let p2=   document.getElementById("itemprice-2")
+     let p3=   document.getElementById("itemprice-3")
+     let p4=   document.getElementById("itemprice-4")
+
+    
+     v1=p1.innerText;
+     v2=p2.innerText;
+     v3=p3.innerText;
+     v4=p4.innerText
+    //  total=v1+v2;
+     total=(parseInt(v1)+parseInt(v2)+parseInt(v3)+parseFloat(v4));
+     let final=document.getElementById("Final").innerText=`₹ ` + total;
+
+     
+     }
+
+
+
+
     function increase() {
-       const num=docum~
+       let num=document.getElementById("quantity");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*60}`;
+   const total=price.innerText;
+   
+ 
+
     }
     function decrease() {
 
-        let quantityinput= document.getElementById("increase");
-        let currentinput=parseInt(quantityinput.innerText.trim());
-        if (currentinput>0) {
-            quantityinput.value=currentinput-1;
+        let quantityinput= document.getElementById("quantity");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
         }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*60}`;
     }
+
+    function increase_2() {
+       let num=document.getElementById("quantity-2");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-2");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*150}`;
+   
+
+
+    }
+    function decrease_2() {
+
+        let quantityinput= document.getElementById("quantity-2");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-2");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*150}`;
+    }
+
+    function increase_3() {
+       let num=document.getElementById("quantity-3");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-3");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=`${quantity*100}`;
+   
+
+
+    }
+    function decrease_3() {
+
+        let quantityinput= document.getElementById("quantity-3");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-3");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*100}`;
+    }
+
+    function increase_4() {
+       let num=document.getElementById("quantity-4");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-4");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=`${quantity*80}`;
+   
+
+
+    }
+    function decrease_4() {
+
+        let quantityinput= document.getElementById("quantity-4");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price4=document.getElementById("itemprice-4");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+          
+        }
+        else{
+            alert("Order at least one")
+        }
+     }
+
+
+     function increase_21() {
+       let num=document.getElementById("quantity-21");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-21");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*60}`;
+   const total=price.innerText;
+   
+ 
+
+    }
+    function decrease_21() {
+
+        let quantityinput= document.getElementById("quantity-21");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-21");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*60}`;
+    }
+    
+    function increase_22() {
+       let num=document.getElementById("quantity-22");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-22");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*100}`;
+   const total=price.innerText;
+   
+ 
+
+    }
+    function decrease_22() {
+
+        let quantityinput= document.getElementById("quantity-22");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-22");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*100}`;
+    }
+   
+
+    function increase_23() {
+       let num=document.getElementById("quantity-23");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-23");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*100}`;
+   const total=price.innerText;
+   
+ 
+
+    }
+    function decrease_23() {
+
+        let quantityinput= document.getElementById("quantity-23");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-23");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*100}`;
+    }
+
+
+    function increase_24() {
+       let num=document.getElementById("quantity-24");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice-24");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*110}`;
+   const total=price.innerText;
+   
+ 
+
+    }
+    function decrease_24() {
+
+        let quantityinput= document.getElementById("quantity-24");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice-24");
+        if (currentinput>1) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*110}`;
+    }
+    
 </script>
 </body>
 </html>

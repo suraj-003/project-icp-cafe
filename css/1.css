@@ -593,7 +593,7 @@ button:hover {
     margin-left: 200px;
     width: 600px;
     border-radius: 30px;
-    height: 200px;
+    height: auto;
     border: 1px solid black;
 }
 .order-menu{
@@ -610,7 +610,7 @@ button:hover {
 
 .order-sign{
 height: 30px;
-margin-left: 200px;
+margin-left: 25px;
 cursor: pointer;
 }
 
@@ -618,4 +618,13 @@ cursor: pointer;
     height: 30px;
 margin-left: 10px;
 cursor: pointer;
+}
+.amount{
+    margin-left: 24px;
+}
+hr{
+   color: black;
+   margin-top: 2px;
+   width: 590px;
+   margin-left: 4px;
 }
