@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/1.css">
 </head>
-<body style="background-color: white;">
+<body style="background-color: #f4f4f4;">
 
 
     <div class="box">
@@ -35,31 +35,34 @@
               <a class="nav-link active" aria-current="page" href="/pages/foodmenu.html"> Menu</a> 
               <a class="nav-link active" aria-current="page" href="/pages/service.html">About</a> 
               <!-- <a class="nav-link active" aria-current="page" href="#">About</a>  -->
-              <a class="nav-link" href="#">Contact For Franchise </a>
+              <a class="nav-link" href="/pages/contact.html">Contact For Franchise </a>
               <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
             </div>
           </div>
         </div>
-      </nav> <h4 style="text-align: center; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: black; font-weight:bold; font-size: 40px;">COMPLETE YOUR ORDER</h4><br>
+      </nav> 
+      
+      
+      <h4 style="text-align: center; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: black; font-weight:bold; font-size: 40px;">COMPLETE YOUR ORDER</h4><br>
     
 
-<div class="order-center">
+<div class="order-center "  id="orderForm" style="background-color: #f4f4f4;;">
     <div>
         <h3 style="color: darkred; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Misal</h3>
         
 
-        <div class="order-1"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
+        <div class="order-1"  style="background-color: #fff; border: none;"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
             
            
             <div class="horizontal">
                 <p style="margin:   5px; margin-left: 50px;"> MISAL PAV</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 60</span>
                 <img onclick="decrease()" class="order-sign" src="/images/minus sogn.png" alt="">
-                <span class="number" id="quantity">1</span>
+                <span class="number" id="quantity-1">0    </span>
                  <img onclick="increase()" class="plus-sign" src="/images/plus.png" alt="">
 
 
-                 <span class="amount" id="itemprice">  60</span>
+                 <span class="amount" id="itemprice">  0</span>
 
 
                              <!-- <input class="order-input" id="quantity" type="text" > -->
@@ -69,12 +72,12 @@
                 
                 <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 150</span>
                 <img onclick="decrease_2()" class="order-sign" src="/images/minus sogn.png" alt="">
-                <span class="number" id="quantity-2">1</span>
+                <span class="number" id="quantity-2">0</span>
                 
 
                 <img onclick="increase_2()"  class="plus-sign" src="/images/plus.png" alt="">
 
-                <span class="amount" id="itemprice-2"> 150</span>
+                <span class="amount" id="itemprice-2"> 0</span>
 
                 
             </div>
@@ -83,27 +86,27 @@
                 
                 <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
                 <img onclick="decrease_3()" class="order-sign" src="/images/minus sogn.png" alt="">
-                <span class="number" id="quantity-3">1</span>
+                <span class="number" id="quantity-3">0</span>
                 <img onclick="increase_3()" class="plus-sign" src="/images/plus.png" alt="">
-                <span class="amount" id="itemprice-3"> 100</span>
+                <span class="amount" id="itemprice-3"> 0</span>
             </div>
             <div class="horizontal">
                 <p style="margin:   5px; margin-left: 50px;">  FRY MISAL</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
                 <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 80</span> 
 
                 <img onclick="decrease_4()" class="order-sign" src="/images/minus sogn.png" alt="">
-                <span class="number" id="quantity-4">1</span>
+                <span class="number" id="quantity-4">0</span>
                 <img onclick="increase_4()" class="plus-sign" src="/images/plus.png" alt="">
-                <span class="amount" id="itemprice-4">  80</span>
+                <span class="amount" id="itemprice-4">  0</span>
                
 
            
     
             </div>
-<hr>
+<!-- <hr> -->
 
-<button onclick="Total()" style="margin-left: 245px; border-radius: 5px; margin-bottom: 5px;"> Total</button>
-<span id="Final" style="margin-left: 180px; color: black; font-size: 20px; font-weight: bold ;">  </span>
+<!-- <button onclick="Total()" style="margin-left: 245px; border-radius: 5px; margin-bottom: 5px;"> Total</button> -->
+<!-- <span id="Final" style="margin-left: 180px; color: black; font-size: 20px; font-weight: bold ;">  </span> -->
 <!-- <p style="margin-top: -10px; margin-left: 520px; font-weight: bold; background-color: lightcoral;" id="Final" onclick="Total()">0 </p> -->
 
 
@@ -116,18 +119,18 @@
     <h3 style="color: darkred; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Cold Drinks</h3>
     
 
-    <div class="order-1"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
+    <div class="order-1" style="background-color:#fff; border: none;"> <p style="margin-left: 350px; font-size: 20px;">Price &nbsp;&nbsp; Quantity &nbsp; Total</p>
         
        
         <div class="horizontal">
             <p style="margin:   5px; margin-left: 50px;"> MOJITO</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 60</span>
             <img onclick="decrease_21()" class="order-sign" src="/images/minus sogn.png" alt="">
-            <span class="number" id="quantity-21">1</span>
+            <span class="number" id="quantity-21">0</span>
              <img onclick="increase_21()" class="plus-sign" src="/images/plus.png" alt="">
 
 
-             <span class="amount" id="itemprice-21">  60</span>
+             <span class="amount" id="itemprice-21">  0</span>
 
 
                          <!-- <input class="order-input" id="quantity" type="text" > -->
@@ -137,12 +140,12 @@
             
             <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
             <img onclick="decrease_22()" class="order-sign" src="/images/minus sogn.png" alt="">
-            <span class="number" id="quantity-22">1</span>
+            <span class="number" id="quantity-22">0</span>
             
 
             <img onclick="increase_22()"  class="plus-sign" src="/images/plus.png" alt="">
 
-            <span class="amount" id="itemprice-22"> 100</span>
+            <span class="amount" id="itemprice-22"> 0</span>
 
             
         </div>
@@ -151,18 +154,18 @@
             
             <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 100</span>
             <img onclick="decrease_23()" class="order-sign" src="/images/minus sogn.png" alt="">
-            <span class="number" id="quantity-23">1</span>
+            <span class="number" id="quantity-23">0</span>
             <img onclick="increase_23()" class="plus-sign" src="/images/plus.png" alt="">
-            <span class="amount" id="itemprice-23"> 100</span>
+            <span class="amount" id="itemprice-23"> 0</span>
         </div>
         <div class="horizontal">
             <p style="margin:   5px; margin-left: 50px;">   TOM COLLINS</p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
             <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹ 110</span> 
 
             <img onclick="decrease_24()" class="order-sign" src="/images/minus sogn.png" alt="">
-            <span class="number" id="quantity-24">1</span>
+            <span class="number" id="quantity-24">0</span>
             <img onclick="increase_24()" class="plus-sign" src="/images/plus.png" alt="">
-            <span class="amount" id="itemprice-24">  110</span>
+            <span class="amount" id="itemprice-24">  0</span>
            
 
        
@@ -171,15 +174,64 @@
 
         
         
-<hr>
+<!-- <hr> -->
 
-<button onclick="Total()" style="margin-left: 245px; border-radius: 5px; margin-bottom: 5px;"> Total</button>
-<span id="Final" style="margin-left: 180px; color: black; font-size: 20px; font-weight: bold ;">  </span>
 
+
+
+</div> <br>
+<button onclick="Total()" style="margin-left: 420px; border-radius: 5px; margin-bottom: 5px; width: 160px;  "><a style="text-decoration: none; color: white;" >
+    Total</button> 
+<span id="Final" style="margin-left: 120px; color: black; font-size: 20px; font-weight: bold ;">  0</span>
+
+<button onclick="place_order(), storeData()"  id="placeorder"  style="margin-left: 420px; border-radius: 5px; margin-bottom: 5px; width: 160px;  ">
+   <a style="text-decoration: none; color: white; ">  Place Your Order</a></button>
 
   
 
 <script>
+function place_order() {
+     let p1=  document.getElementById("itemprice")
+     let p2=   document.getElementById("itemprice-2")
+     let p3=   document.getElementById("itemprice-3")
+     let p4=   document.getElementById("itemprice-4")
+     let p5=   document.getElementById("itemprice-21")
+     let p6=   document.getElementById("itemprice-22")
+     let p7=   document.getElementById("itemprice-23")
+     let p8=   document.getElementById("itemprice-24")
+
+     v1=p1.innerText;
+     v2=p2.innerText;
+     v3=p3.innerText;
+     v4=p4.innerText
+     v5=p5.innerText;
+     v6=p6.innerText;
+     v7=p7.innerText;
+     v8=p8.innerText
+    //  total=v1+v2;
+     total=(parseInt(v1)+parseInt(v2)+parseInt(v3)+parseFloat(v4)+parseInt(v5)+parseInt(v6)+parseInt(v7)+parseFloat(v8));
+     let final=document.getElementById("Final").innerText=`₹ ` + total;
+
+    let q1= document.getElementById("quantity-1").innerText
+    let q2=  document.getElementById("quantity-2").innerText
+    let q3=  document.getElementById("quantity-3").innerText
+    let q4=  document.getElementById("quantity-4").innerText
+    let q5= document.getElementById("quantity-21").innerText
+    let q6=  document.getElementById("quantity-22").innerText
+    let q7=  document.getElementById("quantity-23").innerText
+    let q8=  document.getElementById("quantity-24").innerText
+
+    if (q1==0 && q2==0 && q3==0 && q4==0 && q5==0 && q6==0 && q7==0 && q8==0) {
+        alert("You can order at least only one item")
+    }
+        else{
+           alert( window.location.href='receipt_page.html')
+        }
+     
+     }
+
+
+
 
 
 function Total() {
@@ -187,15 +239,35 @@ function Total() {
      let p2=   document.getElementById("itemprice-2")
      let p3=   document.getElementById("itemprice-3")
      let p4=   document.getElementById("itemprice-4")
+     let p5=   document.getElementById("itemprice-21")
+     let p6=   document.getElementById("itemprice-22")
+     let p7=   document.getElementById("itemprice-23")
+     let p8=   document.getElementById("itemprice-24")
 
-    
      v1=p1.innerText;
      v2=p2.innerText;
      v3=p3.innerText;
      v4=p4.innerText
+     v5=p5.innerText;
+     v6=p6.innerText;
+     v7=p7.innerText;
+     v8=p8.innerText
     //  total=v1+v2;
-     total=(parseInt(v1)+parseInt(v2)+parseInt(v3)+parseFloat(v4));
+     total=(parseInt(v1)+parseInt(v2)+parseInt(v3)+parseFloat(v4)+parseInt(v5)+parseInt(v6)+parseInt(v7)+parseFloat(v8));
      let final=document.getElementById("Final").innerText=`₹ ` + total;
+
+    let q1= document.getElementById("quantity-1").innerText
+    let q2=  document.getElementById("quantity-2").innerText
+    let q3=  document.getElementById("quantity-3").innerText
+    let q4=  document.getElementById("quantity-4").innerText
+    let q5= document.getElementById("quantity-21").innerText
+    let q6=  document.getElementById("quantity-22").innerText
+    let q7=  document.getElementById("quantity-23").innerText
+    let q8=  document.getElementById("quantity-24").innerText
+
+    if (q1==0 && q2==0 && q3==0 && q4==0 && q5==0 && q6==0 && q7==0 && q8==0) {
+        alert("You can order at least only one item")
+    }
 
      
      }
@@ -228,7 +300,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -261,7 +333,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-2");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -294,7 +366,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-3");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -327,7 +399,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price4=document.getElementById("itemprice-4");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
           
         }
@@ -356,13 +428,13 @@ function Total() {
  
 
     }
-    function decrease_21() {
+    function  decrease_21() {
 
         let quantityinput= document.getElementById("quantity-21");
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-21");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -396,7 +468,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-22");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -431,7 +503,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-23");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -466,7 +538,7 @@ function Total() {
         
         let currentinput=parseInt(quantityinput.innerText);
         let price=document.getElementById("itemprice-24");
-        if (currentinput>1) {
+        if (currentinput>0) {
             quantityinput.innerText=--currentinput;
         }
         else{
@@ -475,6 +547,46 @@ function Total() {
         price.innerText=`${currentinput*110}`;
     }
     
+
+    function increase() {
+       let num=document.getElementById("quantity");
+    //    const quantity=document.getElementById()
+    let price=document.getElementById("itemprice");
+    
+
+    let quantity=parseInt(num.innerText);
+    if(quantity<20){
+        num.innerText=++quantity;
+    }
+
+   
+
+   price.innerText=` ${quantity*60}`;
+   const total=price.innerText;
+   
+ 
+
+    }
+    function decrease() {
+
+        let quantityinput= document.getElementById("quantity");
+        
+        let currentinput=parseInt(quantityinput.innerText);
+        let price=document.getElementById("itemprice");
+        if (currentinput>0) {
+            quantityinput.innerText=--currentinput;
+        }
+        else{
+            alert("Order at least one")
+        }
+        price.innerText=`${currentinput*60}`;
+    }
+
+
+   
+
 </script>
+
+
 </body>
 </html>

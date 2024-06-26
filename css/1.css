@@ -612,12 +612,14 @@ button:hover {
 height: 30px;
 margin-left: 25px;
 cursor: pointer;
+border-radius: 50%;
 }
 
 .plus-sign{
     height: 30px;
 margin-left: 10px;
 cursor: pointer;
+border-radius: 50%;
 }
 .amount{
     margin-left: 24px;
@@ -628,3 +630,6 @@ hr{
    width: 590px;
    margin-left: 4px;
 }
+
+/* receipt  */
+

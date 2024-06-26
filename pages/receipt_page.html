@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Order Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .order-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+
+
+      
+      
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .custom-checkbox {
+            position: relative;
+            display: block;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .custom-checkbox:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: blue;
+            border: none;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 7px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <h2>Place Your Order</h2>
+        
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="product">Select Product:</label>
+                <select id="product" name="product" required>
+                    <option value="java-book">Java Programming Book - $29.99</option>
+                    <option value="web-dev-kit">Web Development Kit - $49.99</option>
+                    <option value="dsa-workbook">DSA Workbook - $19.99</option>
+                </select>
+            </div> -->
+            <!-- <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div> -->
+            <div class="form-group">
+                <label for="payment">Payment Method:</label>
+                
+                            <label class="custom-checkbox">Cash On Delivery
+                                <input type="radio" name="payment" value="Cash On Delivery">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox">UPI
+                                <input type="radio" name="payment" value="UPI">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox">Credit/Debit Cards
+                                <input type="radio" name="payment" value="Credit/Debit Cards">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-checkbox">PayPal
+                                <input type="radio" name="payment" value="PayPal">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+            
+
+            
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+
+    <script>
+
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('name').textContent = 'Name: ' + urlParams.get('name');
+        document.getElementById('email').textContent = 'Email: ' + urlParams.get('email');
+        document.getElementById('phone').textContent = 'Phone: ' + urlParams.get('phone');
+        document.getElementById('address').textContent = 'Address: ' + urlParams.get('address');
+        document.getElementById('product').textContent = 'Product: ' + urlParams.get('product');
+        document.getElementById('quantity').textContent = 'Quantity: ' + urlParams.get('quantity');
+        document.getElementById('payment').textContent = 'Payment Method: ' + urlParams.get('payment');
+    </script>
+</body>
+</html>

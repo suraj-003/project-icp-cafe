@@ -3,194 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Order Page</title>
+    <title>Payment Method</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
         }
-
-        .container {
-            background-color: #fff;
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-
-        h2, h3 {
-            text-align: center;
-            color: #333;
-        }
-
         .form-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            margin-bottom: 15px;
         }
-
-        .form-group label {
-            width: 48%;
-            margin-bottom: 10px;
+        label {
+            display: block;
+            margin-bottom: 5px;
             font-weight: bold;
         }
-
-        .form-group input[type="text"],
-        .form-group input[type="tel"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .full-width {
-            width: 100%;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .menu-item input[type="number"] {
-            width: 50px;
-            margin-left: 10px;
-        }
-
-        .total {
-            text-align: right;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .payment {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 20px;
-            color: #d9534f;
-        }
-
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+        .custom-checkbox {
+            position: relative;
             display: block;
-            width: 100%;
-            margin-top: 20px;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
         }
-
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .custom-checkbox:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: blue;
+            border: none;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .custom-checkbox .checkmark:after {
+            left: 7px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
         button:hover {
-            background-color: #218838;
-        }
-
-        .search {
-            margin-bottom: 20px;
+            background-color: darkblue;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Cafe Order Page</h2>
-        <div class="search">
-            <input type="text" id="searchBox" placeholder="Search menu..." oninput="filterMenu()">
-        </div>
-        <form id="orderForm" action="/submit-order" method="post">
+    <div class="form-container">
+        <form id="orderForm">
             <div class="form-group">
-                <label for="name">Your Name:
-                    <input type="text" id="name" name="name" required>
+                <label for="payment">Payment Method:</label>
+                <label class="custom-checkbox">Cash On Delivery
+                    <input type="radio" name="payment" value="Cash On Delivery">
+                    <span class="checkmark"></span>
                 </label>
-
-                <label for="phone">Phone:
-                    <input type="tel" id="phone" name="phone" required>
+                <label class="custom-checkbox">UPI
+                    <input type="radio" name="payment" value="UPI">
+                    <span class="checkmark"></span>
                 </label>
-
-                <label for="email">Your Email:
-                    <input type="email" id="email" name="email" required>
+                <label class="custom-checkbox">Credit/Debit Cards
+                    <input type="radio" name="payment" value="Credit/Debit Cards">
+                    <span class="checkmark"></span>
                 </label>
-
-                <label for="address" class="full-width">Delivery Address:
-                    <textarea id="address" name="address" rows="3" required></textarea>
+                <label class="custom-checkbox">PayPal
+                    <input type="radio" name="payment" value="PayPal">
+                    <span class="checkmark"></span>
                 </label>
             </div>
-
-            <h3>Menu</h3>
-            <div id="menuItems">
-                <!-- Menu items will be dynamically inserted here -->
-            </div>
-
-            <div class="total" id="totalPrice">Total: $0</div>
-            <div class="payment" id="paymentDue">You need to pay: $0</div>
-
-            <button type="submit">Place Order</button>
+            <button type="submit">Place Your Order</button>
         </form>
     </div>
-
-    <script>
-        const menuarr = [
-            "MISAL PAV", "KAKA'S SPECIAL MISAL", "KAKA'S MISAL", "FRY MISAL", "Mojito", "Mai Tai", "watermelon",
-            "Tom Collins", "BUTTER DOSA", "CUTTING DOSA", "MASALA DOSA", "PANEER DOSA", "COLD COFFEE", "OREO COFFEE",
-            "CHOCOLATE SHAKE", "VANILA MILKSHAKE", "STRAWBERRY MILKSHAKE", "RED WINE MILKSHAKE", "RED VELVET MILKSHAKE",
-            "SUGAR COOKIE", "MASALA CHAI", "ADRAK CHAI", "ELAICHI CHAI", "FILTER COFFEE", "HALADI DUDH", "GREEN TEA",
-            "BADAM MILK", "KESAR DUDH"
-        ];
-
-        const prices = {
-            "MISAL PAV": 3, "KAKA'S SPECIAL MISAL": 5, "KAKA'S MISAL": 4, "FRY MISAL": 4, "Mojito": 3,
-            "Mai Tai": 4, "watermelon": 2, "Tom Collins": 3, "BUTTER DOSA": 4, "CUTTING DOSA": 3, "MASALA DOSA": 5,
-            "PANEER DOSA": 6, "COLD COFFEE": 3, "OREO COFFEE": 4, "CHOCOLATE SHAKE": 4, "VANILA MILKSHAKE": 3,
-            "STRAWBERRY MILKSHAKE": 3, "RED WINE MILKSHAKE": 5, "RED VELVET MILKSHAKE": 4, "SUGAR COOKIE": 2,
-            "MASALA CHAI": 2, "ADRAK CHAI": 2, "ELAICHI CHAI": 2, "FILTER COFFEE": 2, "HALADI DUDH": 3, "GREEN TEA": 2,
-            "BADAM MILK": 3, "KESAR DUDH": 4
-        };
-
-        const menuItemsDiv = document.getElementById('menuItems');
-
-        function displayMenuItems(menuItems) {
-            menuItemsDiv.innerHTML = '';
-            menuItems.forEach(item => {
-                const menuItemDiv = document.createElement('div');
-                menuItemDiv.classList.add('menu-item');
-                menuItemDiv.innerHTML = `
-                    <label for="${item.toLowerCase().replace(/ /g, '')}">${item} ($${prices[item]} each):</label>
-                    <input type="number" id="${item.toLowerCase().replace(/ /g, '')}" name="${item.toLowerCase().replace(/ /g, '')}" min="0" value="0" oninput="calculateTotal()">
-                `;
-                menuItemsDiv.appendChild(menuItemDiv);
-            });
-        }
-
-        function filterMenu() {
-            const searchQuery = document.getElementById('searchBox').value.toLowerCase();
-            const filteredMenu = menuarr.filter(item => item.toLowerCase().includes(searchQuery));
-            displayMenuItems(filteredMenu);
-        }
-
-        function calculateTotal() {
-            let total = 0;
-            menuarr.forEach(item => {
-                const quantity = document.getElementById(item.toLowerCase().replace(/ /g, '')).value;
-                total += quantity * prices[item];
-            });
-            document.getElementById('totalPrice').innerText = 'Total: $' + total;
-            document.getElementById('paymentDue').innerText = 'You need to pay: $' + total;
-        }
-
-        // Display all menu items on initial load
-        displayMenuItems(menuarr);
-    </script>
 </body>
 </html>
