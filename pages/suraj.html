@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Method</title>
+    <title>Transactional Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,6 +18,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide the form initially */
         }
         .form-group {
             margin-bottom: 15px;
@@ -27,52 +28,11 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        .custom-checkbox {
-            position: relative;
-            display: block;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            user-select: none;
-        }
-        .custom-checkbox input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            width: 20px;
-            background-color: #eee;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .custom-checkbox:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
-        .custom-checkbox input:checked ~ .checkmark {
-            background-color: blue;
-            border: none;
-        }
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        .custom-checkbox input:checked ~ .checkmark:after {
-            display: block;
-        }
-        .custom-checkbox .checkmark:after {
-            left: 7px;
-            top: 4px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            transform: rotate(45deg);
+        input[type="text"], input[type="email"], input[type="number"], select, input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
         }
         button {
             background-color: blue;
@@ -86,11 +46,27 @@
         button:hover {
             background-color: darkblue;
         }
+        .fill-button {
+            display: block;
+            margin: 40px auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div class="form-container">
+    <div class="fill-button">
+        <button >Fill Form</button>
+    </div>
+    <div class="form-container" id="transactionalForm">
         <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
             <div class="form-group">
                 <label for="payment">Payment Method:</label>
                 <label class="custom-checkbox">Cash On Delivery
@@ -113,5 +89,11 @@
             <button type="submit">Place Your Order</button>
         </form>
     </div>
+
+    <script>
+        function showForm() {
+            document.getElementById('transactionalForm').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
